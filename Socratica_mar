@@ -1,6 +1,12 @@
-//https://github.com/socratica/sql/issues/2
+/*https://github.com/socratica/sql/issues/2*/
 
 CREATE SEQUENCE martian_id
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+CREATE SEQUENCE base_id
 MINVALUE 1
 START WITH 1
 INCREMENT BY 1
@@ -43,5 +49,28 @@ Values(martian_id.nextval, 'John', 'Carter', NULL, 8);
 
 
 
+CREATE TABLE  base(
+    base_id number(10) NOT NULL,
+    base_name VARCHAR2(50) NOT NULL,
+    founded DATE ,
+    PRIMARY KEY(base_id)
+);
+INSERT INTO base(base_id,base_name,founded)
+Values(base_id.nextval, 'Tharsisland',TO_DATE('2037-06-03','yyyy/mm/dd') );
+INSERT INTO base(base_id,base_name,founded)
+Values(base_id.nextval,'Valles Marineris 2.0', TO_DATE('2040-12-01','yyyy/mm/dd'));
+INSERT INTO base(base_id,base_name,founded)
+Values(base_id.nextval, 'Gale Cratertown',TO_DATE('2014-08-16','yyyy/mm/dd') );
+INSERT INTO base(base_id,base_name,founded)
+Values(base_id.nextval, 'New New New York',TO_DATE('2042-02-10' ,'yyyy/mm/dd') );
+INSERT INTO base(base_id,base_name,founded)
+Values(base_id.nextval, 'Olympus Mons Spa & Casino', NULL);
+
+
 Drop table martian;
 Drop sequence martian_id;
+Drop table base;
+Drop sequence base_id;
+
+
+
