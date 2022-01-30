@@ -60,7 +60,7 @@ Values(base_id.nextval, 'Tharsisland',TO_DATE('2037-06-03','yyyy/mm/dd') );
 INSERT INTO base(base_id,base_name,founded)
 Values(base_id.nextval,'Valles Marineris 2.0', TO_DATE('2040-12-01','yyyy/mm/dd'));
 INSERT INTO base(base_id,base_name,founded)
-Values(base_id.nextval, 'Gale Cratertown',TO_DATE('2014-08-16','yyyy/mm/dd') );
+Values(base_id.nextval, 'Gale Cratertown',TO_DATE('2014-08-15','yyyy/mm/dd') );
 INSERT INTO base(base_id,base_name,founded)
 Values(base_id.nextval, 'New New New York',TO_DATE('2042-02-10' ,'yyyy/mm/dd') );
 INSERT INTO base(base_id,base_name,founded)
