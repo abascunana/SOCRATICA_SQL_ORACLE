@@ -1,3 +1,5 @@
+//https://github.com/socratica/sql/issues/2
+
 CREATE SEQUENCE martian_id
 MINVALUE 1
 START WITH 1
