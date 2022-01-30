@@ -12,6 +12,13 @@ START WITH 1
 INCREMENT BY 1
 CACHE 10;
 
+
+CREATE SEQUENCE visitor_id
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
 CREATE TABLE martian(
     martian_id number(10) not null,
     first_name VARCHAR2(50) NOT NULL,
@@ -67,10 +74,35 @@ INSERT INTO base(base_id,base_name,founded)
 Values(base_id.nextval, 'Olympus Mons Spa & Casino', NULL);
 
 
-Drop table martian;
+CREATE TABLE visitor(
+    visitor_id number(10) not null,
+    host_id number(10),
+    first_name VARCHAR2(50) NOT NULL,
+    last_name VARCHAR2(50) NOT NULL,
+    PRIMARY KEY(visitor_id)
+);
+INSERT INTO visitor(visitor_id,host_id,first_name,last_name)
+Values(visitor_id.nextval,7, 'George', 'Ambrose');
+INSERT INTO visitor(visitor_id,host_id,first_name,last_name)
+Values(visitor_id.nextval,1, 'Kris', 'Cardenas');
+INSERT INTO visitor(visitor_id,host_id,first_name,last_name)
+Values(visitor_id.nextval,9, 'Priscilla', 'Lane');
+INSERT INTO visitor(visitor_id,host_id,first_name,last_name)
+Values(visitor_id.nextval,11, 'Jane', 'Thornton');
+INSERT INTO visitor(visitor_id,host_id,first_name,last_name)
+Values(visitor_id.nextval,NULL, 'Doug', 'Stavenger');
+INSERT INTO visitor(visitor_id,host_id,first_name,last_name)
+Values(visitor_id.nextval,NULL, 'Jamie', 'Waterman');
+INSERT INTO visitor(visitor_id,host_id,first_name,last_name)
+Values(visitor_id.nextval,8, 'Martin', 'Humphries');
+
+
+/*Drop table martian;
 Drop sequence martian_id;
 Drop table base;
 Drop sequence base_id;
+Drop table visitor;
+Drop sequence visitor_id;*/
 
 
 
