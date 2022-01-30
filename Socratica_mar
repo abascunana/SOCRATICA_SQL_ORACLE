@@ -96,13 +96,46 @@ Values(visitor_id.nextval,NULL, 'Jamie', 'Waterman');
 INSERT INTO visitor(visitor_id,host_id,first_name,last_name)
 Values(visitor_id.nextval,8, 'Martin', 'Humphries');
 
+CREATE TABLE inventory(
+    base_id number(10) not null,
+    supply_id number(10),
+    quantity_id number(10)
+   
+);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(1, 1, 8);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(1, 3, 5);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(1, 5, 1);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(1, 6, 2);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(1, 8, 12);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(1, 9, 1);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(2, 4, 5);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(2, 8, 62);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(2, 10, 37);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(2, 8, 62);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(3, 2, 11);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(3, 7, 2);
+INSERT INTO inventory(base_id,supply_id,quantity_id)
+Values(4, 10, 91);
 
 /*Drop table martian;
 Drop sequence martian_id;
 Drop table base;
 Drop sequence base_id;
 Drop table visitor;
-Drop sequence visitor_id;*/
+Drop sequence visitor_id;
+Drop table inventory;*/
 
 
 
